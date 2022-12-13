@@ -2,6 +2,7 @@ import { Controller, Get, Post, Options } from '@nestjs/common';
 import { PrismaService } from './prisma.service';
 import { randomUUID } from 'crypto';
 import { Body } from '@nestjs/common/decorators';
+import { CreateNotificationBody } from './create-notification-body';
 const OptionsList={
   'GET':{
     '/notifications':' Pega todoas as notificações existentes na tabela'
@@ -19,7 +20,7 @@ export class AppController {
     return this.prisma.notifications.findMany();
   }
   @Post()
-  async create(@Body() body: any){
+  async create(@Body() body: CreateNotificationBody){
     const {recipientId, content, category} = body
     await this.prisma.notifications.create({
       data:{
