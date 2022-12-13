@@ -40,9 +40,6 @@ export class Notification{
         return this.props.readAt;
     }
 
-    public set createdAt(createdAt: Date){
-        this.props.createdAt = createdAt;
-    }
     public get createdAt(): Date{
         return this.props.createdAt;
     }
