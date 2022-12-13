@@ -150,3 +150,6 @@ Pensar na aplicação desconexa de qualquer meio externo.
 
     Todo o restante da aplicação que não vai na infra
     tudo que é independente da camada externa
+Value Object:
+    um pequeno objeto que representa uma entidade simples cuja igualdade não é baseada em identidade: ou seja, dois objetos de valor são iguais quando têm o mesmo valor, não sendo necessariamente o mesmo objeto.
+    
