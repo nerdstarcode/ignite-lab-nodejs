@@ -110,3 +110,5 @@ Para visualizar o banco podemos executar
 npx prisma studio
 ```
 Que vai abrir no navegador uma interface para visualizar o banco
+
+[Prisma na documentação do Nest](https://docs.nestjs.com/recipes/prisma#prisma)
