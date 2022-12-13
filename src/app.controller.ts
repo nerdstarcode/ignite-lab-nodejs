@@ -19,16 +19,16 @@ export class AppController {
     return this.prisma.notifications.findMany();
   }
   @Post()
-  async create(@Body() body: object){
-    console.log(body);
-    // await this.prisma.notifications.create({
-    //   data:{
-    //     id: randomUUID(),
-    //     content: 'Você tem uma nova solicitação de amizade!',
-    //     category: 'Social',
-    //     recipientId: randomUUID(),
-    //   }
-    // })
+  async create(@Body() body: any){
+    const {recipientId, content, category} = body
+    await this.prisma.notifications.create({
+      data:{
+        id: randomUUID(),
+        content,
+        category,
+        recipientId,
+      }
+    })
   }
   @Options()
   optionsComands(){
