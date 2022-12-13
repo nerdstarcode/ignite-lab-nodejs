@@ -65,3 +65,18 @@ Injeção de dependências:
     postas na intânciação delas, ao fazer declarar uma
     dependência em uma instância, dentro do module ele
     define que tem aquela dependência.
+### [Prisma](https://www.prisma.io/docs/getting-started)
+Instalando cli prisma como dependência de desenvolvimento
+```bash
+npm i prisma -D
+```
+Instalando a parte que vai ser usada para nos conectarmos no banco de dados
+```bash
+npm i @prisma/client
+```
+Iniciando estrutura do prisma com uma flag para rodar com SQLite.
+
+```bash
+npx prisma init --datasource-provider SQLite
+```
+O Nest consegue usar outros bancos SQL mais conhecidos.
