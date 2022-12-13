@@ -7,7 +7,7 @@ Bora codar.
 - NestJS
 - Prisma
 - Jest
-- 
+- Insomnia
 ## Primeiro dia
 O que é um microsserviço?
     
@@ -112,3 +112,12 @@ npx prisma studio
 Que vai abrir no navegador uma interface para visualizar o banco
 
 [Prisma na documentação do Nest](https://docs.nestjs.com/recipes/prisma#prisma)
+
+### [Insomnia](https://insomnia.rest)
+É só instalar mesmo e é isso kk.
+
+### Nest
+Agora novamente no Nest, vamos instalar outras libs nele
+```bash
+npm i class-validator class-transformer
+```
