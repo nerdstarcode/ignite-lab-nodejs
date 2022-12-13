@@ -83,7 +83,7 @@ O Nest consegue usar outros bancos SQL mais conhecidos.
 
 Criando uma tabela de para as notificações, o recipientId
 é uma "chave estrangeira" a forma do prisma lidar com isso 
-é esse `@@index([recipientId])`
+é esse `@@index([recipientId])` (Isso ajuda para buscar o id do usuário em outra tabela)
 ```prisma
 model Notifications {
   id          String    @id
@@ -97,3 +97,16 @@ model Notifications {
 }
 
 ```
+
+Para efetivamente criar a tabela no banco precisamos
+executar:
+```bash
+npx prisma migrate dev
+```
+Ai sim ele vai fazer a migração do código que escrevemos
+para o banco e criar a tabela.
+Para visualizar o banco podemos executar
+```bash
+npx prisma studio
+```
+Que vai abrir no navegador uma interface para visualizar o banco
