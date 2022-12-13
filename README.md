@@ -80,3 +80,20 @@ Iniciando estrutura do prisma com uma flag para rodar com SQLite.
 npx prisma init --datasource-provider SQLite
 ```
 O Nest consegue usar outros bancos SQL mais conhecidos.
+
+Criando uma tabela de para as notificações, o recipientId
+é uma "chave estrangeira" a forma do prisma lidar com isso 
+é esse `@@index([recipientId])`
+```prisma
+model Notifications {
+  id          String    @id
+  recipientId String
+  content     String
+  category    String
+  readtedAt   DateTime?
+  createdAt   DateTime  @default(now())
+
+  @@index([recipientId])
+}
+
+```
