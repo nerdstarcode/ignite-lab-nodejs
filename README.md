@@ -1,73 +1,67 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# Ignite Lab NodeJS
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Bora que foguete não tem ré! #neverstoplearning
+Bora codar.
+- NodeJS
+- NestJS
+- Prisma
+- Jest
+- 
+## Primeiro dia
+O que é um microsserviço?
+    
+- São serviços pequenos que se complementam;
+- São serviços específicos e modulares;
+- Serviços independentes.
+Ter microsserviços também implica em um banco de dados mais modular, 
+alguns problemas que surgem são as comunicações entre diferentes bancos
+de dados, como resolver? Duplicidade de dados é uma forma, usando mensagerias 
+podemos passar através dessas mensagerias os dados entre um ou mais
+bancos de outros microsserviços.
 
-## Description
+### Nestjs
+- Framework opinado;
+    
+    Framework que tem uma estrutura prévia, ele opina para padronização do código
+- Integrações;
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+    Para integrar com outras libs que o Nest não engloba pode gerar problemas, mas
+    ele trás velocidade e produtividade por limitar as tomadas de decições, há menos
+    atritos na escolha das tecnologias.
+    Claro, há tecnologias muito boas já prontas dentro do Nest.
+- TypeScript e Decorators.
 
-## Installation
-
+## Criando o projeto
+### [Instalando dependências do Nestjs](https://docs.nestjs.com/first-steps)
+Instalando o nest cli.
 ```bash
-$ npm install
+npm i -g @nestjs/cli
 ```
-
-## Running the app
-
+Criando a estrutura do projeto.
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+nest new project-name
 ```
-
-## Test
-
+Iniciando o projeto
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+npm run start:dev  
 ```
+Decorators: @DecoratorName
+- controller
 
-## Support
+    Define rotas
+- service
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+    Repositórios, 
 
-## Stay in touch
+Inversão de dependências: 
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+    Ao invés do app controller buscar a dependencia 
+    em outro arquivo, ele recebe uma funcionalidade 
+    ele recebe a funcinalidade quando é instânciado
+Injeção de dependências:
 
-## License
-
-Nest is [MIT licensed](LICENSE).
+    O Nest consegue entender dependências quando são
+    postas na intânciação delas, ao fazer declarar uma
+    dependência em uma instância, dentro do module ele
+    define que tem aquela dependência.
