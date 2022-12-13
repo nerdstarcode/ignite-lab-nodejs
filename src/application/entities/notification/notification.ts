@@ -1,7 +1,7 @@
 import { Replace } from "src/helpers/Replace";
 import { Content } from "./content";
 
-export interface NotificarionProps{
+export interface NotificationProps{
     recipientId: string;
     content: Content;
     category: string;
@@ -9,9 +9,9 @@ export interface NotificarionProps{
     createdAt: Date;
 }
 export class Notification{
-    private props: NotificarionProps;
+    private props: NotificationProps;
 
-    constructor(props: Replace<NotificarionProps, { createdAt?: Date}>){
+    constructor(props: Replace<NotificationProps, { createdAt?: Date}>){
         this.props = {
             ...props,
             createdAt: props.createdAt ?? new Date()
