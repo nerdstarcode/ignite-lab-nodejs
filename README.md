@@ -121,3 +121,32 @@ Agora novamente no Nest, vamos instalar outras libs nele
 ```bash
 npm i class-validator class-transformer
 ```
+## Segundo dia
+
+### Design de software
+
+- Arquitetar como as coisas vão funcionar;
+- Regras de negócios;
+- Casos de uso.
+
+DDD - domain driven design?
+
+-  Quais são os requisitos funcionais?
+- Quais são os requisitos não funcionais?
+- Quais são as regras de negócios?
+
+Pensar na aplicação desconexa de qualquer meio externo.
+
+#### Pastas
+- infra
+
+    Tudo que é externo, tudo que tem relação com a 
+    camada externa
+    - Banco de Dados;
+    - Conexão com outras apis;
+    - Http...
+    Tudo que dá acesso ao mundo exterior da aplicação.
+- applications
+
+    Todo o restante da aplicação que não vai na infra
+    tudo que é independente da camada externa
