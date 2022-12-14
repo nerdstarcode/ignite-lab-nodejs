@@ -1,3 +1,4 @@
+import { Injectable } from "@nestjs/common";
 import { Content } from "../entities/notification/content";
 import { Notification } from "../entities/notification/notification";
 import { NotificationsRepository } from "../repositories/notifications-repository";
@@ -9,6 +10,7 @@ interface SendNotificationRequest{
 interface SendNotificationResponse{
     notification: Notification;
 }
+@Injectable()
 export class SendNotification{
     constructor(
         private notificationsRepository: NotificationsRepository
