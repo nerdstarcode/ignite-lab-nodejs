@@ -161,3 +161,9 @@ Repository Patern:
 
     Intermédio entre nossa aplicação e camada de persistência.
     O que fazem a comunicação entre a aplicação e a camada de persistência
+
+Banco de dados em memória:
+
+    É esse array ai anterioir, assim que a aplicação reiniciar esses dados morrem,
+    dai no caso é só transportar como fizemos para um arquivo ao invés
+    de ficar lá dentro
