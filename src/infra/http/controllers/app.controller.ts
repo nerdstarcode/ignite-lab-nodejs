@@ -1,8 +1,8 @@
 import { Controller, Get, Post, Options } from '@nestjs/common';
-import { PrismaService } from './prisma.service';
+import { PrismaService } from '../../prisma.service';
 import { randomUUID } from 'crypto';
 import { Body } from '@nestjs/common/decorators';
-import { CreateNotificationBody } from './create-notification-body';
+import { CreateNotificationBody } from '../dtos/create-notification-body';
 const OptionsList={
   'GET':{
     '/notifications':' Pega todoas as notificações existentes na tabela'
