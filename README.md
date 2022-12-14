@@ -157,3 +157,7 @@ Casos de uso:
     Como o usuário interage com a aplicação, funcionalidades 
     da aplicação.
 
+Repository Patern:
+
+    Intermédio entre nossa aplicação e camada de persistência.
+    O que fazem a comunicação entre a aplicação e a camada de persistência
