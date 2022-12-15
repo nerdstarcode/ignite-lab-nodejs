@@ -167,3 +167,7 @@ Banco de dados em memória:
     É esse array ai anterioir, assim que a aplicação reiniciar esses dados morrem,
     dai no caso é só transportar como fizemos para um arquivo ao invés
     de ficar lá dentro
+## Terceiro dia
+
+### Mappers
+Servem pra ajudar nas diferentes representações necessárias na apresentação de uma mesma entidade.

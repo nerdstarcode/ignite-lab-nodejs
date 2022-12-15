@@ -1,8 +1,7 @@
 import { Controller, Post, Options, Body } from '@nestjs/common';
-import { Content } from 'src/application/entities/notification/content';
-import { SendNotification } from 'src/application/use-cases/send-notification';
-import { PrismaService } from '../../database/prisma/prisma.service';
+import { SendNotification } from '@application/use-cases/send-notification';
 import { CreateNotificationBody } from '../dtos/create-notification-body';
+import { NotificationViewModel } from '../view-models/notification-view-module';
 const OptionsList = {
   'GET': {
     '/notifications': ' Pega todo as as notificações existentes na tabela'
@@ -27,7 +26,9 @@ export class NotificationsController {
       content,
       category
     });
-    return { notification }
+    return { 
+      notification : NotificationViewModel.toHTTP(notification)
+    }
   }
   @Options()
   optionsComands() {
